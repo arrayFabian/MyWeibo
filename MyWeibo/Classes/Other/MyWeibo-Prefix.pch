@@ -1,0 +1,43 @@
+//
+//  MyWeibo-Prefix.pch
+//  MyWeibo
+//
+//  Created by Mac on 16/2/4.
+//  Copyright © 2016年 fabian. All rights reserved.
+//
+
+#ifndef MyWeibo_Prefix_pch
+#define MyWeibo_Prefix_pch
+
+//#ifdef __OBJC__
+
+
+#import "UIView+FLFrame.h"
+#import "UIImage+FLImage.h"
+
+/**------------cell-------------*/
+#define FLCellMargin 10
+#define FLCellNameFont [UIFont systemFontOfSize:13]
+#define FLCellTimeFont [UIFont systemFontOfSize:12]
+#define FLCellSourceFont FLCellTimeFont
+#define FLCellTextFont [UIFont systemFontOfSize:15]
+
+#define FLKeyWindow [UIApplication sharedApplication].keyWindow
+#define FLAppScreenWidth [UIScreen mainScreen].bounds.size.width
+#define FLAppScreenHeight [UIScreen mainScreen].bounds.size.height
+
+#ifdef DEBUG//调试
+
+#define FLLog(...) NSLog(__VA_ARGS__)
+
+#else//发布
+
+#define FLLog(...)
+
+#endif
+
+
+//#endif
+
+
+#endif /* MyWeibo_Prefix_pch */
